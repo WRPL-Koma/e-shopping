@@ -14,7 +14,13 @@ const Hero: FC<HeroProps> = ({ headline, description }) => {
     <div className="bg-accent-9 border-b border-t border-accent-2">
       <Container>
         <div className={s.root}>
-          <h2 className={s.title}>{headline}</h2>
+          {/* <h2 className={s.title}>{headline}</h2> */}
+          <h2 className={s.title}>
+            <span className="text-[#7FFF30] font-extrabold">Unleash</span> your
+            style.{'  '}
+            <span className="text-[#7FFF30] font-extrabold">Embrace </span>
+            your individuality.
+          </h2>
           <div className={s.description}>
             <p>{description}</p>
             <Link
