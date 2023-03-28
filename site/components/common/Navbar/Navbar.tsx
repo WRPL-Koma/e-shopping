@@ -14,16 +14,7 @@ interface NavbarProps {
   links?: Link[]
 }
 
-const Navbar: FC<NavbarProps> = ({ links }) => {
-  const [searchbarEnabled, setSearchbarEnabled] = useState<boolean>(false)
-
-  useEffect(() => {
-    setSearchbarEnabled(process.env.COMMERCE_SEARCH_ENABLED == 'true')
-  }, [])
-
-  console.log(process.env.COMMERCE_SEARCH_ENABLED)
-
-  return (
+const Navbar: FC<NavbarProps> = ({ links }) => (
     <NavbarRoot>
       <Container clean className="mx-auto max-w-8xl px-6">
         <div className={s.nav}>
@@ -42,7 +33,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
               ))}
             </nav>
           </div>
-          {searchbarEnabled && (
+          {process.env.COMMERCE_SEARCH_ENABLED && (
             <div className="justify-center flex-1 hidden lg:flex">
               <Searchbar />
             </div>
@@ -51,13 +42,13 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
             <UserNav />
           </div>
         </div>
-        {searchbarEnabled && (
+        {process.env.COMMERCE_SEARCH_ENABLED && (
           <div className="flex pb-4 lg:px-6 lg:hidden">
             <Searchbar id="mobile-search" />
           </div>
         )}
       </Container>
     </NavbarRoot>
-  )
-}
+)
+
 export default Navbar

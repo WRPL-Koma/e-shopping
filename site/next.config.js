@@ -40,6 +40,13 @@ module.exports = withCommerceConfig({
   experimental: {
     esmExternals: 'loose',
   },
+
+  env: {
+    COMMERCE_SEARCH_ENABLED: true,
+    COMMERCE_CART_ENABLED: true,
+    COMMERCE_WISHLIST_ENABLED: true,
+    COMMERCE_CUSTOMERAUTH_ENABLED: true
+  }
 })
 
 // Don't delete this console log, useful to see the commerce config in Vercel deployments
