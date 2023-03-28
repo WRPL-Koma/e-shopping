@@ -7,4 +7,5 @@ import nodeHandler from '../utils/node-handler'
  * @param {CommerceAPI} commerce The Commerce API instance.
  * @param endpoints An object containing the handlers for each endpoint.
  */
+
 export default process.env.NEXT_RUNTIME === 'edge' ? edgeHandler : nodeHandler
