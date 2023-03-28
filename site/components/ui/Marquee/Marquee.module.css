@@ -18,5 +18,6 @@
 }
 
 .secondary {
-  @apply bg-accent-9;
+  /* @apply bg-accent-9; */
+  @apply bg-[#1263FF];
 }

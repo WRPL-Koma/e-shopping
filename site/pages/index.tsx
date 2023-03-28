@@ -60,8 +60,8 @@ export default function Home({
         ))}
       </Marquee>
       <Hero
-        headline=" Dessert dragée halvah croissant."
-        description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
+        headline="Unleash your style. Embrace your individuality."
+        description="Welcome to our online clothing store where we celebrate individuality and empower you to express your unique style. Discover the latest fashion trends and timeless pieces designed to flatter every body type. Unleash your style and embrace your individuality with high-quality clothing made from premium materials. Join our community of fashion enthusiasts and shop with confidence today."
       />
       <Grid layout="B" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
